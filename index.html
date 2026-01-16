@@ -1,1 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tharun Pudi | Portfolio</title>
+  <style>
+    :root{
+      --bg:#0b1020;
+      --panel:#0f172a;
+      --panel2:#0b1222;
+      --border:#1f2a44;
+      --text:#e6edf3;
+      --muted:#b7c2ce;
+      --muted2:#8aa0b8;
+      --accent:#4b74ff;
+      --chip:#111c33;
+    }
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      background: radial-gradient(1200px 700px at 20% 10%, #111b35 0%, var(--bg) 55%);
+      color:var(--text);
+    }
+    a{ color:inherit; }
+    .wrap{ max-width:1200px; margin:0 auto; padding:28px 16px; }
+    .layout{ display:grid; grid-template-columns: 320px 1fr; gap:18px; }
+    @media (max-width: 900px){ .layout{ grid-template-columns:1fr; } }
+
+    .card{
+      background: linear-gradient(180deg, var(--panel) 0%, var(--panel2) 100%);
+      border:1px solid var(--border);
+      border-radius:18px;
+      padding:18px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.25);
+    }
+
+    /* LEFT */
+    .avatar{
+      width:92px; height:92px; border-radius:50%;
+      border:1px solid var(--border);
+      background:#0a0f1a;
+      display:grid; place-items:center;
+      margin-bottom:14px;
+      overflow:hidden;
+    }
+    .avatar img{ width:100%; height:100%; object-fit:cover; }
+    .name{ font-size:22px; font-weight:700; margin:0; }
+    .handle{ color:var(--muted2); margin:6px 0 14px; font-size:14px; }
+    .bio{ color:var(--muted); line-height:1.55; margin:0 0 14px; font-size:14px; }
+    .btn{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:10px 12px; border-radius:12px;
+      border:1px solid var(--border);
+      background:#0c1426;
+      text-decoration:none;
+      margin:6px 6px 0 0;
+    }
+    .btn:hover{ border-color: var(--accent); }
+    .meta{ margin-top:14px; color:var(--muted2); font-size:13px; }
+    .meta div{ margin:8px 0; display:flex; gap:10px; align-items:center; }
+    .dot{ width:8px; height:8px; border-radius:50%; background:var(--accent); display:inline-block; }
+
+    /* RIGHT */
+    .titleRow{ display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; }
+    h1{ margin:0; font-size:26px; }
+    .subtitle{ color:var(--muted); margin:8px 0 0; line-height:1.6; }
+
+    .section{ margin-top:14px; }
+    .section h2{
+      margin:0 0 10px; font-size:18px;
+      display:flex; align-items:center; gap:10px;
+    }
+    .divider{ height:1px; background:var(--border); margin:14px 0; }
+
+    .chips{ display:flex; flex-wrap:wrap; gap:8px; }
+    .chip{
+      background: var(--chip);
+      border:1px solid var(--border);
+      color:#cfe1ff;
+      padding:7px 10px;
+      border-radius:999px;
+      font-size:13px;
+    }
+    .grid{ display:grid; grid-template-columns: 1fr 1fr; gap:12px; }
+    @media (max-width: 900px){ .grid{ grid-template-columns:1fr; } }
+
+    .proj{
+      border:1px solid var(--border);
+      border-radius:14px;
+      padding:12px;
+      background:#0c1426;
+    }
+    .proj b{ display:block; margin-bottom:6px; }
+    .proj p{ margin:0; color:var(--muted); line-height:1.55; font-size:14px; }
+
+    .footer{ margin-top:18px; color:var(--muted2); font-size:13px; text-align:center; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="layout">
+
+      <!-- LEFT PANEL -->
+      <aside class="card">
+        <div class="avatar" title="Add your photo in assets/profile.jpg">
+          <!-- Optional: add your photo at assets/profile.jpg -->
+          <img src="assets/profile.jpg" alt="Profile" onerror="this.style.display='none'; this.parentElement.innerHTML='👤';" />
+        </div>
+
+        <p class="name">Tharun Pudi</p>
+        <p class="handle">@TharunPudi</p>
+
+        <p class="bio">
+          Senior Software Engineer with 8+ years of experience building scalable backend services and
+          modern web applications using Python, Django, FastAPI, React, SQL, and microservices.
+        </p>
+
+        <a class="btn" href="assets/resume/Venkata Sai Tharun Pudi.pdf" download>📄 Download Resume</a>
+        <a class="btn" href="mailto:tharunpudi4@gmail.com">✉️ Email</a>
+        <a class="btn" href="https://www.linkedin.com/in/venkata-sai-tharun-pudi-abb4033a2" target="_blank" rel="noreferrer">🔗 LinkedIn</a>
+        <a class="btn" href="https://github.com/TharunPudi" target="_blank" rel="noreferrer">💻 GitHub</a>
+
+        <div class="meta">
+          <div><span class="dot"></span> Open to: Full-time / Contract</div>
+          <div>📍 United States</div>
+          <div>🧩 Focus: Backend • APIs • Microservices • Cloud</div>
+        </div>
+      </aside>
+
+      <!-- RIGHT PANEL -->
+      <main class="card">
+        <div class="titleRow">
+          <h1>👋 Hi there</h1>
+        </div>
+        <p class="subtitle">
+          I build secure, scalable systems and clean user experiences for enterprise products across
+          healthcare (EHR), banking, logistics, and large-scale platforms.
+        </p>
+
+        <div class="divider"></div>
+
+        <section class="section">
+          <h2>🚀 Expertise</h2>
+          <div class="grid">
+            <div class="proj">
+              <b>Backend & APIs</b>
+              <p>Python (Django/DRF, FastAPI), REST API design, authentication, integrations, performance optimization.</p>
+            </div>
+            <div class="proj">
+              <b>Microservices</b>
+              <p>Service decomposition, async processing, event-driven patterns, observability, reliability.</p>
+            </div>
+            <div class="proj">
+              <b>Frontend</b>
+              <p>React UI components, dashboards, responsive design, API integration, maintainable UI architecture.</p>
+            </div>
+            <div class="proj">
+              <b>Cloud & DevOps</b>
+              <p>AWS deployments, Docker/Kubernetes, CI/CD with GitHub Actions/Jenkins, infrastructure-friendly delivery.</p>
+            </div>
+          </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <section class="section">
+          <h2>🧰 Tech Stack</h2>
+          <div class="chips">
+            <span class="chip">Python</span>
+            <span class="chip">Django</span>
+            <span class="chip">FastAPI</span>
+            <span class="chip">Flask</span>
+            <span class="chip">React</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">TypeScript</span>
+            <span class="chip">SQL</span>
+            <span class="chip">PostgreSQL</span>
+            <span class="chip">AWS</span>
+            <span class="chip">Docker</span>
+            <span class="chip">Kubernetes</span>
+            <span class="chip">Microservices</span>
+            <span class="chip">GitHub Actions</span>
+            <span class="chip">Jenkins</span>
+          </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <section class="section">
+          <h2>📌 Featured Work</h2>
+          <div class="grid">
+            <div class="proj">
+              <b>Sysco — Enterprise Modernization</b>
+              <p>Modernized enterprise applications with microservices, cloud deployments, and responsive UI experiences.</p>
+            </div>
+            <div class="proj">
+              <b>BNSF — Claims Workflow Platform</b>
+              <p>Built workflow-driven services with role-based access, audit trails, and transparent claim lifecycle tracking.</p>
+            </div>
+            <div class="proj">
+              <b>Innovaccer — Healthcare EHR</b>
+              <p>Worked on EHR modules and APIs supporting clinical workflows and patient record experiences for US hospitals.</p>
+            </div>
+            <div class="proj">
+              <b>Independent Bank — Internal Systems</b>
+              <p>Delivered secure dashboards and backend services for banking workflows with data integrity and access controls.</p>
+            </div>
+          </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <section class="section">
+          <h2>📊 GitHub Stats</h2>
+          <p class="subtitle" style="margin-top:0;">
+            These update automatically as you push code.
+          </p>
+          <div class="grid">
+            <div class="proj">
+              <img alt="GitHub Stats" style="width:100%; border-radius:12px;"
+                   src="https://github-readme-stats.vercel.app/api?username=TharunPudi&show_icons=true" />
+            </div>
+            <div class="proj">
+              <img alt="Top Languages" style="width:100%; border-radius:12px;"
+                   src="https://github-readme-stats.vercel.app/api/top-langs/?username=TharunPudi&layout=compact" />
+            </div>
+          </div>
+        </section>
+
+        <div class="footer">
+          © <span id="year"></span> Tharun Pudi • Hosted on GitHub Pages
+        </div>
+      </main>
+
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
 
